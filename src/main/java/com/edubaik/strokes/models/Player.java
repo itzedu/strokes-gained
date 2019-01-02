@@ -1,8 +1,6 @@
 package com.edubaik.strokes.models;
 
-import javax.persistence.Entity;
 
-@Entity
 public class Player {
 	private String firstName;
 	private String lastName;

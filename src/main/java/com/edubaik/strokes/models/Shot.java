@@ -2,7 +2,6 @@ package com.edubaik.strokes.models;
 
 import javax.persistence.Entity;
 
-@Entity
 public class Shot {
 	private String type;
 	private Integer distance;
