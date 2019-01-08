@@ -1,0 +1,13 @@
+html {
+	font-family: sans-serif;
+}
+
+.navigation-bar {
+	background-color: #005A9C;
+	font-size: 0.69em;
+}
+
+.toggle-button-size {
+	width: 1em !important;
+    height: 1em !important;
+}

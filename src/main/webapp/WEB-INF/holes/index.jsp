@@ -9,25 +9,29 @@
 	<link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1e90ff">
-		<a class="navbar-brand" href="#">Strokes Gained</a>
+	<nav class="navbar navbar-expand-sm navbar-dark navigation-bar">
+		<a class="navbar-brand text-white" href="#">Strokes Gained</a>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	    	<span class="navbar-toggler-icon"></span>
+	    	<span class="navbar-toggler-icon toggle-button-size"></span>
 	  	</button>
 	  	
 	  	<div class="collapse navbar-collapse" id="navbarText">
 	    	<ul class="navbar-nav mr-auto">
-	      		<li class="nav-item active">
-	        		<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	      		<li class="nav-item">
+	        		<a class="nav-link text-white" href="#">Calculator</a>
 	      		</li>
 	      		<li class="nav-item">
-	        		<a class="nav-link" href="#">Features</a>
+	        		<a class="nav-link text-white" href="#">How it works</a>
 	      		</li>
-		      	<li class="nav-item">
-		        	<a class="nav-link" href="#">Pricing</a>
-		      	</li>
 	    	</ul>
-	    	<span class="navbar-text">Navbar text with an inline element</span>
+			<ul class="navbar-nav">
+	    		<li class="nav-item">
+	    			<a href="#" class="nav-link text-white">Sign Up</a>
+	    		</li>
+	    		<li class="nav-item">
+	    			<a href="#" class="nav-link text-white">Log In</a>
+	    		</li>	    		
+	    	</ul>
 	  	</div>
 	</nav>
 	
