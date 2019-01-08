@@ -36,6 +36,16 @@
 	</nav>
 	
 	<div class="container-fluid">
+		<p class="my-3 text-center main-message">
+			Calculate your strokes gained against the average of PGA tour pros
+		</p>			
+		<div class="card" style="width: 18rem;">
+  			<div class="card-body">
+    			<h5 class="card-title">Card title</h5>
+    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    			<a href="#" class="btn btn-primary">Go somewhere</a>
+  			</div>
+		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
