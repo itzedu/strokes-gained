@@ -12,11 +12,12 @@ import com.edubaik.strokes.services.ExcellReaderService;
 public class ShotCalculatorCtrl {
 	@Autowired
 	private ExcellReaderService excellService;
-	
-	@RequestMapping("/shots")
-	public String createShots() throws IOException  {
-		excellService.createShots();
-		return "done";
-	}
+
+//  End point to create shot types and yardages in the database	
+//	@RequestMapping("/shots")
+//	public String createShots() throws IOException  {
+//		excellService.createShots();
+//		return "done";
+//	}
 	
 }
