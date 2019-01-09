@@ -1,5 +1,14 @@
-html {
-	font-family: sans-serif;
+.navbar {
+	padding: 0 1rem;
+}
+
+.navbar-brand {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.navbar, .navbar-brand {
+	min-height: 35px;
 }
 
 .navigation-bar {
@@ -15,4 +24,10 @@ html {
 .main-message {
 	color: #484848 !important;
 	font-weight: 300;
+}
+
+@media (max-width: 862px) {
+	.navbar, .navbar-brand {
+		height: auto;
+	}
 }
