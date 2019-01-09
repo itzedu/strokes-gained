@@ -36,14 +36,27 @@
 	</nav>
 	
 	<div class="container-fluid">
-		<p class="my-3 text-center main-message">
+		<p class="my-4 text-center main-message">
 			Calculate your strokes gained against the average of PGA tour pros
 		</p>			
-		<div class="card" style="width: 18rem;">
+		<div class="card mx-auto" style="width: 40rem;">
   			<div class="card-body">
-    			<h5 class="card-title">Card title</h5>
-    			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    			<a href="#" class="btn btn-primary">Go somewhere</a>
+				<form>
+			  		<div class="form-group">
+			    		<label for="holeYardage">Hole #</label>
+			    		<input type="number" class="form-control" id="holeYardage" >
+					</div>
+			  		<div class="form-group">
+			    		<label for="exampleFormControlSelect1">Example select</label>
+			    		<select class="form-control" id="exampleFormControlSelect1">
+			      			<option>1</option>
+			      			<option>2</option>
+			      			<option>3</option>
+			      			<option>4</option>
+			      			<option>5</option>
+			    		</select>
+			  		</div>
+				</form>
   			</div>
 		</div>
 	</div>
