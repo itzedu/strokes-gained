@@ -39,12 +39,13 @@
 		<p class="my-4 text-center main-message">
 			Calculate your strokes gained against the average of PGA tour pros
 		</p>			
-		<div class="card mx-auto" style="width: 40rem;">
+		<div class="card mx-auto" style="width: 30rem;">
   			<div class="card-body">
 				<form>
-			  		<div class="form-group">
-			    		<label for="holeYardage">Hole #</label>
-			    		<input type="number" class="form-control" id="holeYardage" >
+					<p class="text-center h5">Hole #1</p>
+			  		<div class="form-group row">
+			    		<label class="col-sm-3 col-form-label" for="holeYardage">Total Yards:</label>
+			    		<input style="padding: 0 12px" id="holeYardage" class="col-sm-3 form-control" type="number" >
 					</div>
 			  		<div class="form-group">
 			    		<label for="exampleFormControlSelect1">Example select</label>

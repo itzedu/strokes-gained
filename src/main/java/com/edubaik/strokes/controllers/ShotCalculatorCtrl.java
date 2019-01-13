@@ -20,4 +20,9 @@ public class ShotCalculatorCtrl {
 //		return "done";
 //	}
 	
+//	formula
+//	(Pre-shot strokes-to-hole value) – (Post-shot strokes-to-hole value) – 1.00 = strokes gained value
+
+	
+	
 }
