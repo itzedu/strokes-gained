@@ -6,7 +6,9 @@
 	<meta charset="UTF-8">
 	<title>Welcome to Strokes Gained Calculator</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="/css/styles.css" />
+	<script src="/js/mainStrokes.js" type="text/javascript"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm navbar-dark navigation-bar">
@@ -43,26 +45,40 @@
   			<div class="card-body">
 				<form>
 					<p class="text-center h5">Hole #1</p>
-			  		<div class="form-group row">
-			    		<label class="col-sm-3 col-form-label" for="holeYardage">Total Yards:</label>
-			    		<input style="padding: 0 12px" id="holeYardage" class="col-sm-3 form-control" type="number" >
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group row">
+					    		<label class="mt-1 col-6" for="holeYardage">Total Yards:</label>
+					    		<input id="holeYardage" class="col-6 form-control form-control-sm" type="number" placeholder="400" autofocus>
+							</div>
+							<div class="form-group row">
+					    		<label class="mt-1 col-6" for="par">Par:</label>
+								<select class="col-6 form-control form-control-sm" id="par" disabled>
+					      			<option>3</option>
+					      			<option selected>4</option>
+					      			<option>5</option>
+					    		</select>
+							</div>
+					  		<div class="form-group row">
+								<label class="mt-1 col-6" for="shotType">Shot Lie:</label>
+								<select class="col-6 form-control form-control-sm" id="shotType" disabled>
+					      			<option selected value="Tee">Tee Shot</option>
+					      			<option value="Fairway">Fairway</option>
+					      			<option value="Rough">Rough</option>
+					      			<option value="Sand">Sand</option>
+					      			<option value="Recovery">Recovery</option>
+					      			<option value="Green">Green</option>
+					    		</select>
+					  		</div>
+						</div>
+						<div class="col-6">
+							<p class="text-center">Summary</p>
+						</div>
 					</div>
-			  		<div class="form-group">
-			    		<label for="exampleFormControlSelect1">Example select</label>
-			    		<select class="form-control" id="exampleFormControlSelect1">
-			      			<option>1</option>
-			      			<option>2</option>
-			      			<option>3</option>
-			      			<option>4</option>
-			      			<option>5</option>
-			    		</select>
-			  		</div>
 				</form>
   			</div>
 		</div>
 	</div>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
