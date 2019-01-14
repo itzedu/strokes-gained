@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<title>Welcome to Strokes Gained Calculator</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="/css/styles.css" />
 	<script src="/js/mainStrokes.js" type="text/javascript"></script>
 </head>
@@ -49,7 +49,7 @@
 						<div class="col-6">
 							<div class="form-group row">
 					    		<label class="mt-1 col-6" for="holeYardage">Total Yards:</label>
-					    		<input id="holeYardage" class="col-6 form-control form-control-sm" type="number" placeholder="400" autofocus>
+					    		<input id="holeYardage" class="col-6 form-control form-control-sm" type="number" placeholder="400" min="1" autofocus>
 							</div>
 							<div class="form-group row">
 					    		<label class="mt-1 col-6" for="par">Par:</label>
@@ -73,6 +73,10 @@
 						</div>
 						<div class="col-6">
 							<p class="text-center">Summary</p>
+							<div class="row">
+								<p class="col-6 small">PGA Average: </p>
+								<p class="col-6 small" id="pgaStrokes"></p>
+							</div>
 						</div>
 					</div>
 				</form>
