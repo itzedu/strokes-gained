@@ -43,10 +43,10 @@
 		</p>			
 		<div class="card mx-auto" style="width: 30rem;">
   			<div class="card-body">
-				<form>
-					<p class="text-center h5">Hole #1</p>
-					<div class="row">
-						<div class="col-6">
+				<p class="text-center h5">Hole #1</p>
+				<div class="row">
+					<div class="col-6">
+						<form>
 							<div class="form-group row">
 					    		<label class="mt-1 col-6" for="holeYardage">Total Yards:</label>
 					    		<input id="holeYardage" class="col-6 form-control form-control-sm" type="number" placeholder="400" min="1" autofocus>
@@ -59,27 +59,34 @@
 					      			<option>5</option>
 					    		</select>
 							</div>
-					  		<div class="form-group row">
-								<label class="mt-1 col-6" for="shotType">Shot Lie:</label>
-								<select class="col-6 form-control form-control-sm" id="shotType" disabled>
-					      			<option selected value="Tee">Tee Shot</option>
-					      			<option value="Fairway">Fairway</option>
-					      			<option value="Rough">Rough</option>
-					      			<option value="Sand">Sand</option>
-					      			<option value="Recovery">Recovery</option>
-					      			<option value="Green">Green</option>
-					    		</select>
-					  		</div>
-						</div>
-						<div class="col-6">
-							<p class="text-center">Summary</p>
-							<div class="row">
-								<p class="col-6 small">PGA Average: </p>
-								<p class="col-6 small" id="pgaStrokes"></p>
-							</div>
+				  		</form>
+					</div>
+					<div class="col-6">
+						<p class="text-center">Summary</p>
+						<div class="row">
+							<p class="col-6 small">PGA Average: </p>
+							<p class="col-6 small" id="pgaStrokes">--</p>
 						</div>
 					</div>
-				</form>
+				</div>	
+  				<!-- shot info -->
+  				<div id="shotsInfo" class="form-group row">
+					<label class="mt-1 col-3" for="shotType">First Stroke:</label>
+					<select class="mr-2 col-2 form-control form-control-sm strokes" id="shotType" disabled>
+						<option value="--" selected hidden>Lie</option>
+		      			<option value="Fairway">Fairway</option>
+		      			<option value="Rough">Rough</option>
+		      			<option value="Sand">Sand</option>
+		      			<option value="Recovery">Recovery</option>
+		      			<option value="Green">Green</option>
+		      			<option value="Penalty">Penalty</option>
+		      			<option value="OB">OB</option>
+		    		</select>
+		    		
+		    		<select class="col-3 form-control form-control-sm yd-remaining" id="shotType" disabled>
+						<option value="--" selected hidden>Remaining Yds</option>
+		    		</select>
+				</div>
   			</div>
 		</div>
 	</div>

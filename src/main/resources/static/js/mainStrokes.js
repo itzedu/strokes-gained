@@ -23,16 +23,17 @@ $(document).ready(function() {
 		// check that input is positive
 		if($(this).val() > 0) {
 			$("#par").prop("disabled", false);
+			$(".strokes").prop("disabled", false);
+			$(".yd-remaining").prop("disabled", false);
 			getInitialAverage(yards, "Tee");
-			
 		} else {
 			$("#par").prop("disabled", true);
+			$(".strokes").prop("disabled", true);
+			$(".yd-remaining").prop("disabled", true);
 		}
 	})
 	
-	$("#par").change(function() {
-		var yards = $("#holeYardage").val();
-		var par = $("#par").val();
-
+	$(".strokes").change(function() {
+//		alert("hello");
 	})
 })
