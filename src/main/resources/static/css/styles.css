@@ -64,6 +64,17 @@ output {
 	margin-top: 9px;
 }
 
+/* borderless table */
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+
 /* material icon color */
 .material-icons.lime { color: #40d47e; }
 .material-icons.dodger-blue { color: #1e90ff; }

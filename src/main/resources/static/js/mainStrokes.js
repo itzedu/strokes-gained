@@ -1,17 +1,35 @@
 // ajax function to get initial strokes
-function getInitialAverage(yards, shotType) {
+function getStrokeGained(yards, shotType, callback) {
 	$.ajax({
 		method: "GET",
-		url: "http://localhost:8080/getInitialAvg?yards=" + yards + "&shotType=" + shotType,
+		url: "http://localhost:8080/getStrokeGained?yards=" + yards + "&shotType=" + shotType,
 		success: function(data) {
 			var pgaStroke = data.pgaStroke
-			if(pgaStroke === undefined) {				
-				$("#pgaStrokes").text("Unavailable");
-			} else {
-				$("#pgaStrokes").text(data.pgaStroke);
-			}
+			callback(data.pgaStroke);
 		}
 	})	
+}
+
+function changePGAStrokeAvg(pgaStroke) {
+	if(pgaStroke === undefined) {				
+		$("#pgaStrokes").text("Unavailable");
+	} else {
+		$("#pgaStrokes").text(pgaStroke);
+	}
+}
+
+function addCurrentShotStrokeGained(pgaStroke) {
+	var preShot = Number($("#pgaStrokes").text());
+	var strokeGained = calculateStrokeGained(preShot, pgaStroke);
+	$("#displayStrokeGained").text(strokeGained);
+}
+
+function calculateStrokeGained(preShot, postShot) {
+	console.log(preShot, postShot);
+	//	Pre-shot value – Post-shot strokes-to-hole value – 1.00 = strokes gained value
+	var strokeGained = preShot - postShot - 1;
+	console.log(strokeGained);
+	return parseFloat(strokeGained.toFixed(5));
 }
 
 function getYardageRange(shotType) {
@@ -45,7 +63,7 @@ $(document).ready(function() {
 		if($(this).val() > 0) {
 			$("#par").prop("disabled", false);
 			$(".strokes").prop("disabled", false);
-			getInitialAverage(yards, "Tee");
+			getStrokeGained(yards, "Tee", changePGAStrokeAvg);
 		} else {
 			$("#par").prop("disabled", true);
 			$(".strokes").prop("disabled", true);
@@ -70,5 +88,10 @@ $(document).ready(function() {
 			$("#shotRange").attr("max", range[1]);
 			$("output").html(range[0]);
 		}
+	})
+	
+	$("#addShot").click(function() {
+		getStrokeGained($("#shotRange").val(), $("#shotType").val(), addCurrentShotStrokeGained);
+
 	})
 })

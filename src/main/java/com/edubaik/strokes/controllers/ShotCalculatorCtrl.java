@@ -26,7 +26,7 @@ public class ShotCalculatorCtrl {
 //	formula
 //	(Pre-shot strokes-to-hole value) – (Post-shot strokes-to-hole value) – 1.00 = strokes gained value
 
-	@GetMapping("/getInitialAvg")
+	@GetMapping("/getStrokeGained")
 	public Shot getInitialAvg(@RequestParam(value="yards") Integer yards, @RequestParam(value="shotType") String shotType) {
 		return shotService.findShotByDistanceAndType(yards, shotType);
 	}
