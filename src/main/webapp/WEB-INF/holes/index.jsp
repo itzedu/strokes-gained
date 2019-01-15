@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="/css/styles.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="/js/mainStrokes.js" type="text/javascript"></script>
 </head>
 <body>
@@ -70,23 +72,28 @@
 					</div>
 				</div>	
   				<!-- shot info -->
-  				<div id="shotsInfo" class="form-group row">
-					<label class="mt-1 col-3" for="shotType">First Stroke:</label>
-					<select class="mr-2 col-2 form-control form-control-sm strokes" id="shotType" disabled>
-						<option value="--" selected hidden>Lie</option>
-		      			<option value="Fairway">Fairway</option>
-		      			<option value="Rough">Rough</option>
-		      			<option value="Sand">Sand</option>
-		      			<option value="Recovery">Recovery</option>
-		      			<option value="Green">Green</option>
-		      			<option value="Penalty">Penalty</option>
-		      			<option value="OB">OB</option>
-		    		</select>
-		    		
-		    		<select class="col-3 form-control form-control-sm yd-remaining" id="shotType" disabled>
-						<option value="--" selected hidden>Remaining Yds</option>
-		    		</select>
-				</div>
+  				<div id="shotsInfo">
+	  				<div class="form-group row singleShots">
+						<label class="mt-1 col-3" for="shotType">First Stroke:</label>
+						<select class="mr-3 col-3 form-control form-control-sm strokes" id="shotType" disabled>
+							<option value="--" selected hidden>Lie</option>
+			      			<option value="Fairway">Fairway</option>
+			      			<option value="Rough">Rough</option>
+			      			<option value="Sand">Sand</option>
+			      			<option value="Recovery">Recovery</option>
+			      			<option value="Green">Green</option>
+			      			<option value="Penalty">Penalty</option>
+			      			<option value="OB">OB</option>
+			    		</select>
+			    		
+			    		<div data-range-min="5" data-range-max="600" class="px-0 col-3" id="rangeWrapper">
+				    		<input min="1" max="10" value="1" type="range" class="form-control-range yd-remaining" id="shotRange" oninput="shotOutput.value = shotRange.value" disabled />
+			    		</div>
+			    	
+						<output class="text-center px-0 ml-1 col-1" id="shotOutput"></output>
+			    		<i id="addShot" class="grow ml-1 mt-1 material-icons lime">add_circle</i>
+					</div>
+  				</div>
   			</div>
 		</div>
 	</div>

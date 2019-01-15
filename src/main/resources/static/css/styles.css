@@ -26,6 +26,52 @@
 	font-weight: 300;
 }
 
+.grow { 
+	transition: all .2s ease-in-out; 
+}
+.grow:hover { 
+	transform: scale(1.35);
+	cursor: pointer; 
+}
+
+output {
+	margin-top: 5px;
+	color: #1e90ff;
+  	font-weight: bold;
+  	font-size: 0.9rem;	
+}
+
+#rangeWrapper::before, #rangeWrapper::after {
+	position: absolute;
+	color: #1e90ff;
+  	font-weight: 500;
+  	font-size: 0.65rem;	
+}
+
+#rangeWrapper::before { 
+    top: -0.35rem;
+    left: 0;
+	content: attr(data-range-min);
+} 
+
+#rangeWrapper::after { 
+    top: -0.35rem;
+    right: -0.4em;
+    content: attr(data-range-max);
+}
+
+#shotRange {
+	margin-top: 9px;
+}
+
+/* material icon color */
+.material-icons.lime { color: #40d47e; }
+.material-icons.dodger-blue { color: #1e90ff; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
 @media (max-width: 862px) {
 	.navbar, .navbar-brand {
 		height: auto;
