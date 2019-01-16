@@ -64,10 +64,9 @@
 				  		</form>
 					</div>
 					<div class="col-6">
-						<p class="mb-1 text-center">Summary</p>
-						<div class="row">
-							<p class="pr-0 col-5 offset-sm-2 small text-center">PGA Average: </p>
-							<p class="pl-1 pr-0 col-4 small" id="pgaStrokes">--</p>
+						<div class="mt-1 row">
+							<p class="ml-1 px-0 col-7 text-center">PGA Stroke Avg: </p>
+							<p class="px-0 col" id="pgaStrokes">--</p>
 						</div>
 					</div>
 				</div>	

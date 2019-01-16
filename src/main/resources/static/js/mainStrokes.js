@@ -12,7 +12,7 @@ function getStrokeGained(yards, shotType, callback) {
 
 function changePGAStrokeAvg(pgaStroke) {
 	if(pgaStroke === undefined) {				
-		$("#pgaStrokes").text("Unavailable");
+		$("#pgaStrokes").text("N/A");
 	} else {
 		$("#pgaStrokes").text(pgaStroke);
 	}
