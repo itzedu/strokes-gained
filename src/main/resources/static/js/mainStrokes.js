@@ -33,13 +33,13 @@ function calculateStrokeGained(preShot, postShot) {
 }
 
 function getYardageRange(shotType) {
-//	yardages
-//	tee 100-600 by 1
-//	recovery 100-600 by 1
-//	fairway 5-600 by 1
-//	rough 5-600 by 1
-//	sand 5-600 by 1
-//	green 1-90 by 1
+	//	yardages
+	//	tee 100-600 by 1
+	//	recovery 100-600 by 1
+	//	fairway 5-600 by 1
+	//	rough 5-600 by 1
+	//	sand 5-600 by 1
+	//	green 1-90 by 1
 	var ranges = {
 		"tr": [100, 600],
 		"frs": [5, 600],
@@ -67,6 +67,7 @@ $(document).ready(function() {
 		} else {
 			$("#par").prop("disabled", true);
 			$(".strokes").prop("disabled", true);
+			$("#shotRange").prop("disabled", true);
 		}
 	})
 	
@@ -83,9 +84,9 @@ $(document).ready(function() {
 			$("#shotRange").prop("disabled", false);
 			$("#rangeWrapper").attr("data-range-min", range[0]);
 			$("#rangeWrapper").attr("data-range-max", range[1]);
-			$("#shotRange").attr("min", range[0]);
-			$("#shotRange").attr("value", range[0]);
-			$("#shotRange").attr("max", range[1]);
+			$("#shotRange").prop("min", range[0]);
+			$("#shotRange").prop("max", range[1]);
+			$("#shotRange").prop("value", range[0]);
 			$("output").html(range[0]);
 		}
 	})

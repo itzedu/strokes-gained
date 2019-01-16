@@ -42,21 +42,17 @@ output {
 }
 
 #rangeWrapper::before, #rangeWrapper::after {
-	position: absolute;
+	position: relative;
 	color: #1e90ff;
   	font-weight: 500;
-  	font-size: 0.65rem;	
+  	font-size: 0.9rem;	
 }
 
 #rangeWrapper::before { 
-    top: -0.35rem;
-    left: 0;
 	content: attr(data-range-min);
 } 
 
-#rangeWrapper::after { 
-    top: -0.35rem;
-    right: -0.4em;
+#rangeWrapper::after {
     content: attr(data-range-max);
 }
 

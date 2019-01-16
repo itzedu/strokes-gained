@@ -79,9 +79,9 @@
 	  							<tr>
 	  								<td class="pb-1 pt-0 px-0">First Stroke</td>
 	  							</tr>
-	  							<tr class="text-center">
-	  								<td class="p-0">							
-	  									<select class="form-control form-control-sm strokes" id="shotType" disabled>
+	  							<tr>
+	  								<td class="w-25 p-0">							
+	  									<select class="w-75 form-control form-control-sm strokes" id="shotType" disabled>
 											<option value="--" selected hidden>Lie</option>
 							      			<option value="Fairway">Fairway</option>
 							      			<option value="Rough">Rough</option>
@@ -92,40 +92,19 @@
 							      			<option value="OB">OB</option>
 				    					</select>
 				    				</td>
-				    				<td class="p-0">
-				    					<span>Min: 5</span>
-				    					<input type="number" class="mt-0 yd-remaining" id="shotRange" min="5" max="600"/>
-				    					<span>Max: 600</span>
+				    				<td class="w-50 p-0">
+				    					<label for="shotRange">Remaining Yards:</label>
+				    					<input style="width: 30%" type="number" class="text-center ml-2 mt-0 yd-remaining" id="shotRange" min="5" max="600" disabled/>
 				    				</td>
-				    				<td class="p-0">
+				    				<td class="w-25 p-0">
 										<i style="margin-top: 3px;" id="addShot" class="grow material-icons lime">add_circle</i>
 				    				</td>
 	  							</tr>
+	  							<tr>
+	  								<td id="displayStrokeGained"></td>
+	  							</tr>
 	  						</tbody>
 	  					</table>
-	  					<!-- <div class="form-group row">
-		  					<label class="mt-1 col-3" for="shotType">First Stroke:</label>
-							<select class="mr-3 col-3 form-control form-control-sm strokes" id="shotType" disabled>
-								<option value="--" selected hidden>Lie</option>
-				      			<option value="Fairway">Fairway</option>
-				      			<option value="Rough">Rough</option>
-				      			<option value="Sand">Sand</option>
-				      			<option value="Recovery">Recovery</option>
-				      			<option value="Green">Green</option>
-				      			<option value="Penalty">Penalty</option>
-				      			<option value="OB">OB</option>
-				    		</select>
-				    		
-				    		<div data-range-min="5" data-range-max="600" class="px-0 col-3" id="rangeWrapper">
-					    		<input min="1" max="10" value="1" type="range" class="form-control-range yd-remaining" id="shotRange" oninput="shotOutput.value = shotRange.value" disabled />
-				    		</div>
-				    	
-							<output class="text-center px-0 ml-1 col-1" id="shotOutput"></output>
-				    		<i id="addShot" class="grow ml-1 mt-1 material-icons lime">add_circle</i>
-	  					</div>
-	  					<div class="row">
-	  						<p id="displayStrokeGained"></p>
-	  					</div> -->
 					</div>
   				</div>
   			</div>
