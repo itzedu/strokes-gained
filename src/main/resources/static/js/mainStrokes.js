@@ -7,13 +7,16 @@ function getStrokeGained(yards, shotType, callback) {
 			var pgaStroke = data.pgaStroke
 			callback(data.pgaStroke);
 		}
-	})	
+	})
 }
+
+
 
 function changePGAStrokeAvg(pgaStroke) {
 	if(pgaStroke === undefined) {				
 		$("#pgaStrokes").text("N/A");
 	} else {
+		localStorage.set("yardage", pgaStroke);
 		$("#pgaStrokes").text(pgaStroke);
 	}
 }
@@ -90,6 +93,7 @@ $(document).ready(function() {
 			$("output").html(range[0]);
 		}
 	})
+	
 	
 	$("#addShot").click(function() {
 		getStrokeGained($("#shotRange").val(), $("#shotType").val(), addCurrentShotStrokeGained);
