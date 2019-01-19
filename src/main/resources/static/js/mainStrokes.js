@@ -59,6 +59,8 @@ function getYardageRange(shotType) {
 }
 
 $(document).ready(function() {
+	localStorage.set("holeNumber", 1);
+
 	$("#holeYardage").keyup(function() {
 		var yards = $(this).val();
 
