@@ -10,14 +10,17 @@ function getStrokeGained(yards, shotType, callback) {
 	})
 }
 
-
-
 function changePGAStrokeAvg(pgaStroke) {
 	if(pgaStroke === undefined) {				
 		$("#pgaStrokes").text("N/A");
 	} else {
-		localStorage.set("yardage", pgaStroke);
 		$("#pgaStrokes").text(pgaStroke);
+		var holeNumber = $("#holeNumber").data("hole-number");
+		var info = JSON.parse(localStorage.getItem("info"));
+		info[holeNumber]["yardage"] = $("#holeYardage").val();
+		info[holeNumber]["pgaStroke"] = pgaStroke
+		info[holeNumber]["par"] = $("#par").val();
+		localStorage.setItem("info", JSON.stringify(info));
 	}
 }
 
@@ -59,8 +62,10 @@ function getYardageRange(shotType) {
 }
 
 $(document).ready(function() {
-	localStorage.set("holeNumber", 1);
-
+	// initialize local storage objects for each hole
+	var info = { 1: {}, 2: {}, 3: {}, 4: {}, 5: {}, 6: {}, 7: {}, 8: {}, 9: {}, 10: {}, 11: {}, 12: {},	13: {}, 14: {}, 15: {}, 16: {}, 17: {}, 18: {}};
+	localStorage.setItem("info", JSON.stringify(info));
+	
 	$("#holeYardage").keyup(function() {
 		var yards = $(this).val();
 
@@ -94,6 +99,14 @@ $(document).ready(function() {
 			$("#shotRange").prop("value", range[0]);
 			$("output").html(range[0]);
 		}
+	})
+	
+	$("#par").change(function() {
+		var holeNumber = $("#holeNumber").data("hole-number");
+		var info = JSON.parse(localStorage.getItem("info"));
+		info[holeNumber]["par"] = $(this).val();
+		localStorage.setItem("info", JSON.stringify(info));
+		console.log(info[holeNumber]);
 	})
 	
 	

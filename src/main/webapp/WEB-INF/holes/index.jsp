@@ -45,7 +45,7 @@
 		</p>			
 		<div class="card mx-auto" style="width: 30rem;">
   			<div class="card-body">
-				<p class="text-center h5">Hole #1</p>
+				<p id="holeNumber" data-hole-number="1" class="text-center h5">Hole #1</p>
 				<div class="row">
 					<div class="col-6">
 						<form>
