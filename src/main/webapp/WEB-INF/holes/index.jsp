@@ -73,7 +73,7 @@
   				<!-- shot info -->
   				<div id="shotsInfo">
 	  				<div class="singleShots">
-	  					<table class="table table-borderless">
+	  					<table class="table table-borderless mb-1">
 	  						<tbody>
 	  							<tr>
 	  								<td class="pb-1 pt-0 px-0">First Stroke</td>
@@ -99,11 +99,9 @@
 										<i style="margin-top: 3px;" id="addShot" class="grow material-icons lime">add_circle</i>
 				    				</td>
 	  							</tr>
-	  							<tr>
-	  								<td id="displayStrokeGained"></td>
-	  							</tr>
 	  						</tbody>
 	  					</table>
+	  					<p id="displayStrokeGained">Stroke gained/loss on this shot: </p>
 					</div>
   				</div>
   			</div>

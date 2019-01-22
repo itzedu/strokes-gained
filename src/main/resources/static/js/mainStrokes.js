@@ -27,7 +27,7 @@ function changePGAStrokeAvg(pgaStroke) {
 function addCurrentShotStrokeGained(pgaStroke) {
 	var preShot = Number($("#pgaStrokes").text());
 	var strokeGained = calculateStrokeGained(preShot, pgaStroke);
-	$("#displayStrokeGained").text(strokeGained);
+	$("#displayStrokeGained").append(strokeGained);
 }
 
 function calculateStrokeGained(preShot, postShot) {
