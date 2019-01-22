@@ -80,7 +80,7 @@
 	  							</tr>
 	  							<tr>
 	  								<td class="w-25 p-0">							
-	  									<select class="w-75 form-control form-control-sm strokes" id="shotType" disabled>
+	  									<select style="width: 85%" class="form-control form-control-sm strokes" id="shotType" disabled>
 											<option value="--" selected hidden>Lie</option>
 							      			<option value="Fairway">Fairway</option>
 							      			<option value="Rough">Rough</option>
