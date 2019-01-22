@@ -72,7 +72,7 @@
 				</div>	
   				<!-- shot info -->
   				<div id="shotsInfo">
-	  				<div class="singleShots">
+	  				<div data-stroke="1" class="singleShots">
 	  					<table class="table table-borderless mb-1">
 	  						<tbody>
 	  							<tr>

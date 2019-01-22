@@ -112,6 +112,6 @@ $(document).ready(function() {
 	
 	$("#addShot").click(function() {
 		getStrokeGained($("#shotRange").val(), $("#shotType").val(), addCurrentShotStrokeGained);
-
+		$("#shotsInfo").append($('<div></div>').load("/templates/hole-template.html"));
 	})
 })

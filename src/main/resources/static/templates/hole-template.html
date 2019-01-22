@@ -1,0 +1,31 @@
+<div data-stroke="1" class="singleShots">
+	<table class="table table-borderless mb-1">
+		<tbody>
+			<tr>
+				<td class="pb-1 pt-0 px-0">First Stroke</td>
+			</tr>
+			<tr>
+				<td class="w-25 p-0">							
+					<select style="width: 85%" class="form-control form-control-sm strokes" id="shotType" disabled>
+				<option value="--" selected hidden>Lie</option>
+      			<option value="Fairway">Fairway</option>
+      			<option value="Rough">Rough</option>
+      			<option value="Sand">Sand</option>
+      			<option value="Recovery">Recovery</option>
+      			<option value="Green">Green</option>
+      			<option value="Penalty">Penalty</option>
+      			<option value="OB">OB</option>
+ 					</select>
+ 				</td>
+ 				<td class="w-50 p-0">
+ 					<label for="shotRange">Remaining Yards:</label>
+ 					<input style="width: 30%" type="number" class="text-center ml-2 mt-0 yd-remaining" id="shotRange" min="5" max="600" disabled/>
+ 				</td>
+ 				<td class="w-25 p-0">
+			<i style="margin-top: 3px;" id="addShot" class="grow material-icons lime">add_circle</i>
+ 				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p id="displayStrokeGained">Stroke gained/loss on this shot: </p>
+</div>
